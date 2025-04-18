@@ -58,7 +58,7 @@ def modify_image(image_path,prompt,strength,num_variations,resize_option,custom_
         print(f"Adjusted batch_size={batch_size}, num_variations={num_variations}")
     try:
         pipe = StableDiffusionImageVariationPipeline.from_pretrained(
-            "Savanthgc/Image-Transformation-model-Improved",revision="main",torch_dtype=torch.float32,use_safetensors=True
+            "Savanthgc/Image-Transformation-model-Improved",revision="main",use_safetensors=True
         ).to(device)
     except Exception as e:
         print(f"Error loading model: {e}")
